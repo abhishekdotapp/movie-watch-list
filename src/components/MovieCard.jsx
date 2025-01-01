@@ -44,16 +44,16 @@ const MovieCard = ({ movie }) => {
     ✅
   </button>
 ) : (
-    {!seen ? (
+   !seen ? (
   <button 
     className="favorite-btn" 
     onClick={onSeenClick}
   >
     📺
-  </button> ) : <button 
+  </button> ) : ( <button 
     className="favorite-btn" 
     onClick={both}
-  >❌</button> }
+  >❌</button> )
 )}
         </div>
 
