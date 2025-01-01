@@ -25,6 +25,11 @@ const MovieCard = ({ movie }) => {
       
     }
   }
+  function both(e){
+   e.preventDafault()
+   if(seen) removeFromSeenMovies(movie.id)
+    if(favorite) removeFromFavorites(movie.id)
+  }
 
   return (
     <div className='movie-card'>
@@ -36,15 +41,19 @@ const MovieCard = ({ movie }) => {
     className={`favorite-btn ${favorite ? "active" : ""}`} 
     onClick={onFavoriteClick}
   >
-    {seen ? "🗑️": "✅"}
+    ✅
   </button>
 ) : (
+    {!seen ? (
   <button 
     className="favorite-btn" 
     onClick={onSeenClick}
   >
     📺
-  </button>
+  </button> ) : <button 
+    className="favorite-btn" 
+    onClick={both}
+  >❌</button> }
 )}
         </div>
 
