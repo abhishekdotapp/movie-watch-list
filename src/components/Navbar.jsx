@@ -10,8 +10,8 @@ const Navbar = () => {
     </div>
     <div className="navbar-link">
        <Link to="/" className="nav-link">Home</Link>
-       <Link to="/watch-list" className="nav-link" >Watch List</Link>
-       <Link to="/seen" className="nav-link" >Seen Movies</Link>
+       <Link to="/watch-list" className="nav-link" >Watch List✅</Link>
+       <Link to="/seen" className="nav-link" >Seen Movies📺</Link>
     </div>
     </nav>
   )
