@@ -37,24 +37,30 @@ const MovieCard = ({ movie }) => {
         <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
         <div className="button-container">
           {!favorite ? (
+  !seen ? (
+    <button 
+      className="favorite-btn" 
+      onClick={onSeenClick}
+    >
+      📺
+    </button>
+  ) : (
+    <button 
+      className="favorite-btn" 
+      onClick={onSeenClick}
+    >
+      ❌
+    </button>
+  )
+) : (
   <button 
     className={`favorite-btn ${favorite ? "active" : ""}`} 
     onClick={onFavoriteClick}
   >
     ✅
   </button>
-) : (
-   !seen ? (
-  <button 
-    className="favorite-btn" 
-    onClick={onSeenClick}
-  >
-    📺
-  </button> ) : ( <button 
-    className="favorite-btn" 
-    onClick={both}
-  >❌</button> )
 )}
+          
         </div>
 
 
