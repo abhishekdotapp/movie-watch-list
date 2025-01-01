@@ -8,7 +8,7 @@ const Favorites = () => {
   if (favorites) {
     return (
       <div className="favorites">
-        <h2>Your Watch List</h2>
+        <h2>Your pending movie list</h2>
         <div className="movies-grid">
           {favorites.map((movie) => (
             <MovieCard movie={movie} key={movie.id} />
