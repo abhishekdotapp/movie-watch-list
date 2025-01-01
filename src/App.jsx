@@ -4,13 +4,14 @@ import './css/App.css'
 import Home from './pages/Home'
 import { Route, Routes } from 'react-router-dom'
 import Favorites from './pages/Favorites'
+import {MovieProvider} from "./contexts/MovieContext"
 import Navbar from './components/Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div>
+    <MovieProvider>
       <Navbar />
     <main className="main-content">
       <Routes>
@@ -19,7 +20,7 @@ function App() {
       </Routes>
 
     </main>
-    </div>
+    </MovieProvider>
   )
 }
 
