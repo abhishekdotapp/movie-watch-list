@@ -40,9 +40,9 @@ const MovieCard = ({ movie }) => {
   !seen ? (
     <button 
       className="favorite-btn" 
-      onClick={onSeenClick}
+      onClick={onFavoriteClick}
     >
-      📺
+      ✅
     </button>
   ) : (
     <button 
@@ -55,9 +55,9 @@ const MovieCard = ({ movie }) => {
 ) : (
   <button 
     className={`favorite-btn ${favorite ? "active" : ""}`} 
-    onClick={onFavoriteClick}
+    onClick={onSeenClick}
   >
-    ✅
+    📺
   </button>
 )}
           
