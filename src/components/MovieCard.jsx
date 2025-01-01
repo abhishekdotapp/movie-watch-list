@@ -33,7 +33,7 @@ const MovieCard = ({ movie }) => {
         <div className="button-container">
           <button className={`favorite-btn ${seen ? "active" : ""} `} onClick={onSeenClick}>📺</button>
           <button className={`favorite-btn ${favorite ? "active" : ""}`} onClick={onFavoriteClick}>
-            ✅
+            {!seen ? "✅" : ""}
           </button>
         </div>
 
